@@ -1,0 +1,74 @@
+<div class="p-grid">
+	<div class="p-col-12">
+		<div class="card">
+			<p-toolbar styleClass="p-mb-4">
+				<ng-template pTemplate="left">
+					Yango Registration Admin Dashboard
+				</ng-template>
+			</p-toolbar>
+
+			<p-table #dt [value]="drivers" [columns]="cols" [rows]="10" [paginator]="true" [rowHover]="true"
+				dataKey="id" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+				[showCurrentPageReport]="true">
+
+				<ng-template pTemplate="header">
+					<tr>
+						<th pSortableColumn="firstName">First Name <p-sortIcon field="name"></p-sortIcon>
+						</th>
+						<th pSortableColumn="lastName">Last Name <p-sortIcon field="price"></p-sortIcon>
+						</th>
+						<th pSortableColumn="city">City <p-sortIcon field="category"></p-sortIcon>
+						</th>
+						<th pSortableColumn="phone">Phone <p-sortIcon field="rating"></p-sortIcon>
+						</th>
+						<th pSortableColumn="birthdate">birthdate <p-sortIcon field="name"></p-sortIcon>
+						</th>
+						<th pSortableColumn="license">license <p-sortIcon field="price"></p-sortIcon>
+						</th>
+						<th pSortableColumn="licenseIssueDate">License Issue Date <p-sortIcon field="category">
+							</p-sortIcon>
+						</th>
+						<th pSortableColumn="licenseValidDate">License Valid Date <p-sortIcon field="rating">
+							</p-sortIcon>
+						</th>
+						<th pSortableColumn="carBrand">Car Brand <p-sortIcon field="name"></p-sortIcon>
+						</th>
+						<th pSortableColumn="carModel">Car Model <p-sortIcon field="price"></p-sortIcon>
+						</th>
+						<th pSortableColumn="carPlate">Car Plate <p-sortIcon field="category"></p-sortIcon>
+						</th>
+						<th pSortableColumn="carYear">Car Year <p-sortIcon field="rating"></p-sortIcon>
+						</th>
+						<th pSortableColumn="carColor">Car Color <p-sortIcon field="name"></p-sortIcon>
+						</th>
+						<th pSortableColumn="driverHasPhone">Driver Has Phone <p-sortIcon field="price"></p-sortIcon>
+						</th>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="body" let-driver>
+					<tr>
+						<td>{{driver.firstName}}</td>
+						<td>{{driver.lastName }}</td>
+						<td>{{driver.city}}</td>
+						<td>{{driver.phone}}</td>
+						<td>{{driver.birthdate }}</td>
+						<td>{{driver.license}}</td>
+						<td>{{driver.licenseIssueDate}}</td>
+						<td>{{driver.licenseValidDate }}</td>
+						<td>{{driver.carBrand}}</td>
+						<td>{{driver.carModel}}</td>
+						<td>{{driver.carPlate }}</td>
+						<td>{{driver.carYear}}</td>
+						<td>{{driver.carColor}}</td>
+						<td>{{driver.driverHasPhone}}</td>
+					</tr>
+				</ng-template>
+				<ng-template pTemplate="summary">
+					<div class="p-d-flex p-ai-center p-jc-between">
+						In total there are {{drivers ? drivers.length : 0 }} drivers.
+					</div>
+				</ng-template>
+			</p-table>
+		</div>
+	</div>
+</div>

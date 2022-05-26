@@ -1,0 +1,21 @@
+<div class="login-body">
+    <div class="login-topbar">
+        <span class="app-title">Yango Registration</span>
+    </div>
+    <div class="login-panel">
+        <h1>SIGN IN TO YANGO REGISTRATION</h1>
+        <p>Welcome, please use the form to login.</p>
+        <div class="input-wrapper">
+            <label for="username">Username</label>
+            <input [(ngModel)]="login" type="text" autocomplete="off" id="username" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="password">Password</label>
+            <input [(ngModel)]="password" type="password" autocomplete="off" id="password"
+                class="p-inputtext p-component">
+        </div>
+        <button type="button" (click)="authenticate()" pButton pRipple label="Login"></button>
+
+        <div class="separator"></div>
+    </div>
+</div>

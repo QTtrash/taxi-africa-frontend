@@ -1,0 +1,90 @@
+<div class="login-body">
+
+    <div class="login-topbar">
+        <span class="app-title">Yango Registration</span>
+    </div>
+    <div style="height: 85%; overflow-y:scroll; top: 250px;" class="login-panel">
+        <h1>Ghana Freelance Form</h1>
+        <p>Welcome, please use the form to register.</p>
+        <div class="input-wrapper">
+            <label for="city1">Choose your city</label>
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city" value="Accra" [(ngModel)]="city" id="city1"></p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="city1">Accra</label>
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city" value="Kumasi" [(ngModel)]="city" id="city2"></p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="city2">Kumasi</label>
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <label for="name">Name</label>
+            <input [(ngModel)]="firstName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="surname">Surname</label>
+            <input [(ngModel)]="lastName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="phone">Driver's phone number</label>
+            <input [(ngModel)]="phone" type="text" autocomplete="off" id="phone" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="birthdate">Birthdate</label>
+            <p-calendar [(ngModel)]="birthdate" [showIcon]="true" inputId="icon"></p-calendar>
+        </div>
+        <div class="input-wrapper">
+            <label for="license">Driver's license series & number</label>
+            <input [(ngModel)]="license" type="text" autocomplete="off" id="license" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="dateIssue">Driver's license date of issue</label>
+            <p-calendar [(ngModel)]="licenseIssueDate" [showIcon]="true" inputId="icon"></p-calendar>
+        </div>
+        <div class="input-wrapper">
+            <label for="dateValid">Driver's license valid until</label>
+            <p-calendar [(ngModel)]="licenseValidDate" [showIcon]="true" inputId="icon"></p-calendar>
+        </div>
+        <div class="input-wrapper">
+            <label for="brand">Car brand</label>
+            <input [(ngModel)]="carBrand" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="model">Car model</label>
+            <input [(ngModel)]="carModel" type="text" autocomplete="off" id="model" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="plate">Car state number plate</label>
+            <input [(ngModel)]="carPlate" type="text" autocomplete="off" id="plate" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="carYear">Car year of issue</label>
+            <input [(ngModel)]="carYear" type="text" autocomplete="off" id="carYear" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="color">What is the car's color</label>
+            <input [(ngModel)]="carColor" type="text" autocomplete="off" id="color" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="smartphohe">Does driver have a Smartphone?</label>
+            <div class="p-field-radiobutton">
+                <p-radioButton name="smartphohe" [value]="true" [(ngModel)]="driverHasPhone" id="smartphohe1">
+                </p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="city1">Yes</label>
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city" [value]="false" [(ngModel)]="driverHasPhone" id="smartphohe2">
+                </p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="smartphohe2">No</label>
+            </div>
+        </div>
+        <p-toast key="tst"></p-toast>
+        <button (click)="sendApplication()" [disabled]="finished" type="button" pButton pRipple
+            label="Register"></button>
+        <div class="separator"></div>
+    </div>
+</div>
