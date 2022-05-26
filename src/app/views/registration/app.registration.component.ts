@@ -17,10 +17,10 @@ export class RegistrationComponent {
     firstName: string = "";
     lastName: string = "";
     phone: string = "";
-    birthdate: Date = new Date();
+    birthdate: string = "";
     license: string = "";
-    licenseIssueDate: Date = new Date();
-    licenseValidDate: Date = new Date();
+    licenseIssueDate: string = "";
+    licenseValidDate: string = "";
     carBrand: string = "";
     carModel: string = "";
     carPlate: string = "";

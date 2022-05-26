@@ -3,21 +3,12 @@
     <div class="login-topbar">
         <span class="app-title">Yango Registration</span>
     </div>
-    <div style="height: 85%; overflow-y:scroll; top: 250px;" class="login-panel">
+    <div style="height: 75%; overflow-y:scroll; top: 175px;" class="login-panel">
         <h1>Ghana Freelance Form</h1>
         <p>Welcome, please use the form to register.</p>
         <div class="input-wrapper">
-            <label for="city1">Choose your city</label>
-            <div class="p-field-radiobutton">
-                <p-radioButton name="city" value="Accra" [(ngModel)]="city" id="city1"></p-radioButton>
-                <label class="p-mb-4 p-ml-2" for="city1">Accra</label>
-            </div>
-        </div>
-        <div class="input-wrapper">
-            <div class="p-field-radiobutton">
-                <p-radioButton name="city" value="Kumasi" [(ngModel)]="city" id="city2"></p-radioButton>
-                <label class="p-mb-4 p-ml-2" for="city2">Kumasi</label>
-            </div>
+            <label for="city">City</label>
+            <input [(ngModel)]="city" type="text" autocomplete="off" id="city" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
             <label for="name">Name</label>
@@ -33,7 +24,7 @@
         </div>
         <div class="input-wrapper">
             <label for="birthdate">Birthdate</label>
-            <p-calendar [(ngModel)]="birthdate" [showIcon]="true" inputId="icon"></p-calendar>
+            <input [(ngModel)]="birthdate" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
             <label for="license">Driver's license series & number</label>
@@ -41,11 +32,13 @@
         </div>
         <div class="input-wrapper">
             <label for="dateIssue">Driver's license date of issue</label>
-            <p-calendar [(ngModel)]="licenseIssueDate" [showIcon]="true" inputId="icon"></p-calendar>
+            <input [(ngModel)]="licenseIssueDate" type="text" autocomplete="off" id="brand"
+                class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
             <label for="dateValid">Driver's license valid until</label>
-            <p-calendar [(ngModel)]="licenseValidDate" [showIcon]="true" inputId="icon"></p-calendar>
+            <input [(ngModel)]="licenseValidDate" type="text" autocomplete="off" id="brand"
+                class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
             <label for="brand">Car brand</label>
