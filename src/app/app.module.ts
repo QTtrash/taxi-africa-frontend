@@ -145,6 +145,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import { RegistrationComponent } from "./views/registration/app.registration.component";
 import { AdminDashboardComponent } from "./views/adminDashboard/adminDashboard.crud.component";
+import { RegistrationFrComponent } from "./views/registrationFr/app.registrationFr.component";
 
 FullCalendarModule.registerPlugins([
     dayGridPlugin,
@@ -287,6 +288,7 @@ FullCalendarModule.registerPlugins([
         WidgetsComponent,
         RegistrationComponent,
         AdminDashboardComponent,
+        RegistrationFrComponent,
     ],
     providers: [
         { provide: LocationStrategy, useClass: HashLocationStrategy },

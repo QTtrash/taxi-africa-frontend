@@ -1,0 +1,82 @@
+<div class="login-body">
+
+    <div class="login-topbar">
+        <span class="app-title">Yango Registration</span>
+    </div>
+    <div style="height: 75%; overflow-y:scroll; top: 175px;" class="login-panel">
+        <h1>Bienvenue, veuillez utiliser le formulaire pour vous inscrire.</h1>
+        <div class="input-wrapper">
+            <label for="city">Ville</label>
+            <input [(ngModel)]="city" type="text" autocomplete="off" id="city" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="name">Prénom du conducteur</label>
+            <input [(ngModel)]="firstName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="surname">Nom du conducteur</label>
+            <input [(ngModel)]="lastName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="phone">Numéro de téléphone du conducteur</label>
+            <input [(ngModel)]="phone" type="text" autocomplete="off" id="phone" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="birthdate">Date de naissance</label>
+            <input [(ngModel)]="birthdate" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="license">Série et numéro du permis de conduire</label>
+            <input [(ngModel)]="license" type="text" autocomplete="off" id="license" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="dateIssue">Date de délivrance du permis de conduire</label>
+            <input [(ngModel)]="licenseIssueDate" type="text" autocomplete="off" id="brand"
+                class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="dateValid">Validité du permis de conduire</label>
+            <input [(ngModel)]="licenseValidDate" type="text" autocomplete="off" id="brand"
+                class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="brand">Marque de la voiture</label>
+            <input [(ngModel)]="carBrand" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="model">Modèle de la voiture</label>
+            <input [(ngModel)]="carModel" type="text" autocomplete="off" id="model" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="plate">Numéro d'état de la matricule</label>
+            <input [(ngModel)]="carPlate" type="text" autocomplete="off" id="plate" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="carYear">Année de production de la voiture</label>
+            <input [(ngModel)]="carYear" type="text" autocomplete="off" id="carYear" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="color">la couleur de la voiture</label>
+            <input [(ngModel)]="carColor" type="text" autocomplete="off" id="color" class="p-inputtext p-component">
+        </div>
+        <div class="input-wrapper">
+            <label for="smartphohe">Le conducteur a-t-il un Smartphone</label>
+            <div class="p-field-radiobutton">
+                <p-radioButton name="smartphohe" [value]="true" [(ngModel)]="driverHasPhone" id="smartphohe1">
+                </p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="city1">Oui</label>
+            </div>
+        </div>
+        <div class="input-wrapper">
+            <div class="p-field-radiobutton">
+                <p-radioButton name="city" [value]="false" [(ngModel)]="driverHasPhone" id="smartphohe2">
+                </p-radioButton>
+                <label class="p-mb-4 p-ml-2" for="smartphohe2">Non</label>
+            </div>
+        </div>
+        <p-toast key="tst"></p-toast>
+        <button (click)="sendApplication()" [disabled]="finished" type="button" pButton pRipple
+            label="Register"></button>
+        <div class="separator"></div>
+    </div>
+</div>
