@@ -39,6 +39,7 @@ import { AppLoginComponent } from "./pages/app.login.component";
 import { AppTimelineDemoComponent } from "./pages/app.timelinedemo.component";
 import { RegistrationComponent } from "./views/registration/app.registration.component";
 import { AdminDashboardComponent } from "./views/adminDashboard/adminDashboard.crud.component";
+import { RegistrationFrComponent } from "./views/registrationFr/app.registrationFr.component";
 
 @NgModule({
     imports: [
@@ -58,7 +59,7 @@ import { AdminDashboardComponent } from "./views/adminDashboard/adminDashboard.c
                     component: AdminDashboardComponent,
                 },
                 { path: "registration", component: RegistrationComponent },
-                { path: "registration/fr", component: RegistrationComponent },
+                { path: "registration/fr", component: RegistrationFrComponent },
                 { path: "**", redirectTo: "/registration" },
             ],
             { scrollPositionRestoration: "enabled" }
