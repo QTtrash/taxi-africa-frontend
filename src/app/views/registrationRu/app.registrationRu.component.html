@@ -1,82 +1,82 @@
 <div class="login-body">
 
     <div class="login-topbar">
-        <span class="app-title">Taxi Registration</span>
+        <span class="app-title">Регистрация такси</span>
     </div>
     <div style="height: 75%; overflow-y:scroll; top: 175px;" class="login-panel">
-        <h1>Welcome, please use the form to register.</h1>
+        <h1>Добро пожаловать, пожалуйста, используйте форму для регистрации.</h1>
         <div class="input-wrapper">
-            <label for="city">City</label>
+            <label for="city">Город</label>
             <input [(ngModel)]="city" type="text" autocomplete="off" id="city" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="name">Name</label>
+            <label for="name">Имя</label>
             <input [(ngModel)]="firstName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="surname">Surname</label>
+            <label for="surname">Фамилия</label>
             <input [(ngModel)]="lastName" type="text" autocomplete="off" id="name" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="phone">Driver's phone number</label>
+            <label for="phone">Номер телефона водителя</label>
             <input [(ngModel)]="phone" type="text" autocomplete="off" id="phone" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="birthdate">Birthdate</label>
+            <label for="birthdate">Дата рождения</label>
             <input [(ngModel)]="birthdate" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="license">Driver's license series & number</label>
+            <label for="license">Серия и номер водительского удостоверения</label>
             <input [(ngModel)]="license" type="text" autocomplete="off" id="license" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="dateIssue">Driver's license date of issue</label>
+            <label for="dateIssue">Дата выдачи водительских прав</label>
             <input [(ngModel)]="licenseIssueDate" type="text" autocomplete="off" id="brand"
                 class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="dateValid">Driver's license valid until</label>
+            <label for="dateValid">Водительские права действительны до</label>
             <input [(ngModel)]="licenseValidDate" type="text" autocomplete="off" id="brand"
                 class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="brand">Car brand</label>
+            <label for="brand">Марка автомобиля</label>
             <input [(ngModel)]="carBrand" type="text" autocomplete="off" id="brand" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="model">Car model</label>
+            <label for="model">Модель автомобиля</label>
             <input [(ngModel)]="carModel" type="text" autocomplete="off" id="model" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="plate">Car state number plate</label>
+            <label for="plate">Государственный номерной знак автомобиля</label>
             <input [(ngModel)]="carPlate" type="text" autocomplete="off" id="plate" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="carYear">Car year of issue</label>
+            <label for="carYear">Год выпуска автомобиля</label>
             <input [(ngModel)]="carYear" type="text" autocomplete="off" id="carYear" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="color">What is the car's color</label>
+            <label for="color">Каков цвет автомобиля</label>
             <input [(ngModel)]="carColor" type="text" autocomplete="off" id="color" class="p-inputtext p-component">
         </div>
         <div class="input-wrapper">
-            <label for="smartphohe">Does driver have a Smartphone?</label>
+            <label for="smartphohe">Есть ли у водителя смартфон?</label>
             <div class="p-field-radiobutton">
                 <p-radioButton name="smartphohe" [value]="true" [(ngModel)]="driverHasPhone" id="smartphohe1">
                 </p-radioButton>
-                <label class="p-mb-4 p-ml-2" for="city1">Yes</label>
+                <label class="p-mb-4 p-ml-2" for="city1">Да</label>
             </div>
         </div>
         <div class="input-wrapper">
             <div class="p-field-radiobutton">
                 <p-radioButton name="city" [value]="false" [(ngModel)]="driverHasPhone" id="smartphohe2">
                 </p-radioButton>
-                <label class="p-mb-4 p-ml-2" for="smartphohe2">No</label>
+                <label class="p-mb-4 p-ml-2" for="smartphohe2">Нет</label>
             </div>
         </div>
         <p-toast key="tst"></p-toast>
         <button (click)="sendApplication()" [disabled]="finished" type="button" pButton pRipple
-            label="Register"></button>
+            label="Зарегистрироваться"></button>
         <div class="separator"></div>
     </div>
 </div>
